@@ -110,7 +110,7 @@ body{
   font-family:'Bebas Neue',sans-serif;
   font-style:normal;
   font-size:1em;
-  background:linear-gradient(50deg, var(--sky) 0%, var(--sky) 40%, var(--red) 100%);
+  background:linear-gradient(100deg, #4A9FE0 0%, #a855f7 50%, #E8282A 100%);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   background-clip:text;
