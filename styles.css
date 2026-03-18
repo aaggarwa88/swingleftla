@@ -106,9 +106,13 @@ body{
   color:#fff;
 }
 .hero-title em{
-  font-family:'DM Serif Display',serif;
-  font-style:italic;color:var(--gold);
-  font-size:.9em;
+  font-family:'Bebas Neue',sans-serif;
+  font-style:normal;
+  font-size:1em;
+  background:linear-gradient(100deg, #F5A623 0%, #FF8C00 40%, #E8282A 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
 }
 .hero-sub{
   margin-top:1rem;
