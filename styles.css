@@ -747,9 +747,7 @@ body{
 
   /* Tab bar */
   .tab-bar{top:56px;}
-  .tab-btn span:not(.tab-icon){display:none}
-  .tab-btn{padding:.75rem .9rem;}
-  .tab-icon{font-size:1.1rem;}
+  .tab-btn{padding:.75rem .7rem;font-size:.72rem;}
 
   /* Hero */
   .hero{padding:1.5rem 1rem 0;}
