@@ -16,13 +16,14 @@
   --shadow-md:0 6px 32px rgba(10,15,30,.12);
 }
 
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden;}
 body{
   font-family:'DM Sans',sans-serif;
   background:var(--cream);
   color:var(--ink);
   min-height:100vh;
   overflow-x:hidden;
+  width:100%;
 }
 
 /* ───── HEADER ───── */
@@ -122,7 +123,7 @@ body{
 .hero-sub{
   margin-top:1rem;
   font-size:.95rem;color:rgba(255,255,255,.6);
-  line-height:1.6;max-width:440px;
+  line-height:1.6;max-width:min(440px,100%);
 }
 .hero-stats{
   display:grid;grid-template-columns:repeat(4,auto);
@@ -746,12 +747,14 @@ body{
   .tab-icon{font-size:1.1rem;}
 
   /* Hero */
-  .hero{padding:1.75rem 1rem 0;}
-  .hero-title{font-size:clamp(2.4rem,11vw,3.5rem);}
-  .hero-sub{font-size:.85rem;}
-  .hero-stats{margin-top:1.25rem;}
-  .hstat{padding:.85rem 1rem;}
-  .hstat-n{font-size:1.6rem;}
+  .hero{padding:1.5rem 1rem 0;}
+  .hero-inner{gap:1.25rem;}
+  .hero-title{font-size:clamp(2.2rem,10vw,3.2rem);}
+  .hero-sub{font-size:.85rem;max-width:100%;}
+  .hero-stats{margin-top:1rem;width:100%;border-radius:8px;}
+  .hstat{padding:.7rem .5rem;}
+  .hstat-n{font-size:1.5rem;}
+  .hstat-l{font-size:.58rem;}
 
   /* Main content */
   .main{padding:1.25rem 1rem 3rem;}
