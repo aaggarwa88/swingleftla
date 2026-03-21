@@ -447,7 +447,7 @@ async function init() {
 
   // ── Announcements ───────────────────────────────────────────
   const dotMap = { red: 'ann-dot-red', gold: 'ann-dot-gold', sky: 'ann-dot-sky', green: 'ann-dot-green' };
-  const annData = announcements.length > 0 ? announcements : [];
+  const annData = announcements.filter(a => !a.hidden);
   annTotal = annData.length;
   document.getElementById('ann-counter').textContent = annTotal > 0 ? '1 / ' + annTotal : '';
   document.getElementById('ann-track').innerHTML = annData.map(a => `
