@@ -446,13 +446,13 @@ async function init() {
   if (site.hero_sub) document.getElementById('hero-sub').textContent = site.hero_sub;
 
   // ── Announcements ───────────────────────────────────────────
-  const dotMap = { red: 'ann-dot-red', gold: 'ann-dot-gold', sky: 'ann-dot-sky', green: 'ann-dot-green' };
+  const tagDotMap = { 'Breaking': 'ann-dot-red', 'Action Alert': 'ann-dot-gold', 'Milestone': 'ann-dot-green', 'Chapter News': 'ann-dot-sky', 'Training': 'ann-dot-sky' };
   const annData = announcements.filter(a => !a.hidden);
   annTotal = annData.length;
   document.getElementById('ann-counter').textContent = annTotal > 0 ? '1 / ' + annTotal : '';
   document.getElementById('ann-track').innerHTML = annData.map(a => `
     <div class="ann-slide">
-      <span class="ann-dot ${dotMap[a.color] || 'ann-dot-red'}"></span>
+      <span class="ann-dot ${tagDotMap[a.tag] || 'ann-dot-red'}"></span>
       <div class="ann-content">
         <a href="${a.link || '#'}" target="_blank" class="ann-title-link">${a.title}</a>
         ${a.sub ? '<div class="ann-sub">' + a.sub + '</div>' : ''}
