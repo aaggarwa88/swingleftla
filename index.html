@@ -24,30 +24,29 @@
   </div>
 </header>
 
-
 <!-- ═══ HERO ═══ -->
 <div class="hero">
   <div class="hero-inner">
     <div>
       <div class="hero-label">West LA · Mar Vista · Los Angeles, CA 90066</div>
       <h1 class="hero-title">FLIP THE<em> House</em><br>FROM HERE.</h1>
-      <p class="hero-sub">736 West LA neighbors organizing to defend California's most competitive seats and win the 2026 House majority. Every shift counts.</p>
+      <p class="hero-sub" id="hero-sub">736 West LA neighbors organizing to defend California's most competitive seats and win the 2026 House majority. Every shift counts.</p>
     </div>
     <div class="hero-stats">
       <div class="hstat">
-        <div class="hstat-n">736</div>
+        <div class="hstat-n" id="stat-members">736</div>
         <div class="hstat-l">Members</div>
       </div>
       <div class="hstat">
-        <div class="hstat-n">82</div>
+        <div class="hstat-n" id="stat-events">82</div>
         <div class="hstat-l">Events</div>
       </div>
       <div class="hstat">
-        <div class="hstat-n">1,660</div>
+        <div class="hstat-n" id="stat-shifts">1,660</div>
         <div class="hstat-l">Vol. Shifts</div>
       </div>
       <div class="hstat">
-        <div class="hstat-n">99.9K</div>
+        <div class="hstat-n" id="stat-letters">99.9K</div>
         <div class="hstat-l">Letters</div>
       </div>
     </div>
@@ -69,185 +68,65 @@
 
   <!-- ── NEWS FEED ── -->
   <div id="tab-news" class="tab-panel active">
-
     <div class="feed-layout">
       <div>
+        <!-- Announcements carousel -->
         <div class="announcements">
-      <div class="announcements-head">        
-        <span class="announcements-head-label">Important Announcements</span>
-        <div class="ann-carousel-controls">
-          <span class="ann-counter" id="ann-counter">1 / 4</span>
-          <button class="ann-nav-btn" onclick="annMove(-1)">‹</button>
-          <button class="ann-nav-btn" onclick="annMove(1)">›</button>
-        </div>
-      </div>
-      <div class="ann-track-wrap">
-        <div class="ann-track" id="ann-track">
-          <div class="ann-slide">
-            <span class="ann-dot ann-dot-red"></span>
-            <div class="ann-content">
-              <a href="https://votefwd.org" target="_blank" class="ann-title-link">We're 92 letters away from 100,000 — join a letter-writing session this week!</a>
-              <div class="ann-sub">Vote Forward · Goal: 100,000 letters written by West LA volunteers</div>
+          <div class="announcements-head">
+            <span class="announcements-head-label">Important Announcements</span>
+            <div class="ann-carousel-controls">
+              <span class="ann-counter" id="ann-counter">1 / 4</span>
+              <button class="ann-nav-btn" onclick="annMove(-1)">‹</button>
+              <button class="ann-nav-btn" onclick="annMove(1)">›</button>
             </div>
-            <a href="https://votefwd.org" target="_blank" class="ann-link">Sign up →</a>
           </div>
-          <div class="ann-slide">
-            <span class="ann-dot ann-dot-gold"></span>
-            <div class="ann-content">
-              <a href="https://swingleft.org" target="_blank" class="ann-title-link">Weekly CA-45 phone bank every Saturday, 6–8 PM via Zoom</a>
-              <div class="ann-sub">Scripts provided · All levels welcome · Hosted by David Kim</div>
+          <div class="ann-track-wrap">
+            <div class="ann-track" id="ann-track">
+              <!-- populated by JS -->
             </div>
-            <a href="https://swingleft.org" target="_blank" class="ann-link">RSVP →</a>
           </div>
-          <div class="ann-slide">
-            <span class="ann-dot ann-dot-sky"></span>
-            <div class="ann-content">
-              <a href="https://swingleft.org" target="_blank" class="ann-title-link">New volunteer? Orientation runs every other Thursday at 2 PM on Zoom</a>
-              <div class="ann-sub">Learn about phone banking, canvassing, and letter-writing — get matched to the right action</div>
-            </div>
-            <a href="https://swingleft.org" target="_blank" class="ann-link">Register →</a>
-          </div>
-          <div class="ann-slide">
-            <span class="ann-dot ann-dot-green"></span>
-            <div class="ann-content">
-              <a href="https://swingleft.org" target="_blank" class="ann-title-link">CA-45 rated Toss-Up by Cook Political — our most important race, starting now</a>
-              <div class="ann-sub">Rep. Derek Tran won by fewer than 10,000 votes in 2024 · West LA volunteers made the difference</div>
-            </div>
-            <a href="https://swingleft.org" target="_blank" class="ann-link">Learn more →</a>
+          <div class="ann-pips" id="ann-pips">
+            <!-- populated by JS -->
           </div>
         </div>
-      </div>
-      <div class="ann-pips">
-        <button class="ann-pip active" onclick="annGoto(0)"></button>
-        <button class="ann-pip" onclick="annGoto(1)"></button>
-        <button class="ann-pip" onclick="annGoto(2)"></button>
-        <button class="ann-pip" onclick="annGoto(3)"></button>
-      </div>
-    </div>
 
+        <!-- News posts -->
         <div class="section-hdr">
           <h2>Latest Updates</h2>
           <a href="#">All Posts →</a>
         </div>
-
-        <div class="post-card post-card-featured">
-          <div class="post-inner">
-            <div class="post-meta">
-              <span class="post-cat cat-breaking">🔴 Breaking</span>
-              <span class="post-date">March 17, 2026</span>
-            </div>
-            <div class="post-title">CA-45 Rated Toss-Up by Cook Political — Our Chapter Is Ground Zero</div>
-            <div class="post-body">Cook Political Report has moved CA-45 to toss-up ahead of the 2026 race. Rep. Derek Tran won by fewer than 10,000 votes in 2024, and West LA volunteers made measurable impact in that race. The cycle starts now — we need early phone banking and canvassing to build the lead before it's a sprint.</div>
-          </div>
-          <div class="post-footer">
-            <div class="post-author">
-              <div class="post-avatar">SL</div>
-              <span>Swing Left West LA · Chapter Update</span>
-            </div>
-            <a href="#" class="read-more">Read more →</a>
-          </div>
-        </div>
-
-        <div class="post-card post-card-win">
-          <div class="post-inner">
-            <div class="post-meta">
-              <span class="post-cat cat-win">🎉 Milestone</span>
-              <span class="post-date">March 14, 2026</span>
-            </div>
-            <div class="post-title">99,908 Letters Written — We're 92 Away From 100,000!</div>
-            <div class="post-body">Our chapter is 92 letters away from a historic 100,000. Join a letter-writing session this week and help us cross the finish line. Vote Forward letters have been proven to increase voter turnout — every one matters.</div>
-          </div>
-          <div class="post-footer">
-            <div class="post-author">
-              <div class="post-avatar">VF</div>
-              <span>Vote Forward Team</span>
-            </div>
-            <a href="#" class="read-more">Write letters →</a>
-          </div>
-        </div>
-
-        <div class="post-card post-card-action">
-          <div class="post-inner">
-            <div class="post-meta">
-              <span class="post-cat cat-alert">⚡ Action Alert</span>
-              <span class="post-date">March 12, 2026</span>
-            </div>
-            <div class="post-title">Call Congress This Week: Vote on Social Security Protections</div>
-            <div class="post-body">A key vote on Social Security is expected this week. Calls from constituents make a real difference — it takes 3 minutes. We have a script ready. CA-33 and CA-36 are both potentially competitive in 2026 and calls matter to those offices.</div>
-          </div>
-          <div class="post-footer">
-            <div class="post-author">
-              <div class="post-avatar">WA</div>
-              <span>West LA Action Team</span>
-            </div>
-            <a href="#" class="read-more">Get the script →</a>
-          </div>
-        </div>
-
-        <div class="post-card">
-          <div class="post-inner">
-            <div class="post-meta">
-              <span class="post-cat cat-news">📋 Chapter News</span>
-              <span class="post-date">March 10, 2026</span>
-            </div>
-            <div class="post-title">New Volunteer Orientation Thursdays — Bring a Friend</div>
-            <div class="post-body">We're running new volunteer orientations every other Thursday via Zoom. Perfect for neighbors who want to get involved but aren't sure where to start. Phone banking, letters, canvassing — we'll walk through everything and match you with the right action.</div>
-          </div>
-          <div class="post-footer">
-            <div class="post-author">
-              <div class="post-avatar">MC</div>
-              <span>Maria C. · Volunteer Lead</span>
-            </div>
-            <a href="#" class="read-more">Register →</a>
-          </div>
-        </div>
-
-        <div class="post-card">
-          <div class="post-inner">
-            <div class="post-meta">
-              <span class="post-cat cat-training">🎓 Training</span>
-              <span class="post-date">March 8, 2026</span>
-            </div>
-            <div class="post-title">Updated 2026 Phone Banking Script — Key Themes & Messaging</div>
-            <div class="post-body">Swing Left's national team has released updated talking points for 2026 outreach focused on economic security, healthcare, and democracy. All West LA phone bankers should review the new script before their next shift — it's significantly improved.</div>
-          </div>
-          <div class="post-footer">
-            <div class="post-author">
-              <div class="post-avatar">SL</div>
-              <span>Training Team</span>
-            </div>
-            <a href="#" class="read-more">View script →</a>
-          </div>
+        <div id="news-feed">
+          <!-- populated by JS -->
         </div>
       </div>
 
       <!-- SIDEBAR -->
       <div class="sidebar">
         <div class="sidebar-card">
-          <div class="sidebar-head">📊 Chapter Stats</div>
+          <div class="sidebar-head">Chapter Stats</div>
           <div class="sidebar-body">
             <div class="qs-grid" style="margin-bottom:1.25rem">
               <div class="qs-item">
-                <div class="qs-n">736</div>
+                <div class="qs-n" id="sb-members">736</div>
                 <div class="qs-l">Members</div>
               </div>
               <div class="qs-item">
-                <div class="qs-n">82</div>
+                <div class="qs-n" id="sb-events">82</div>
                 <div class="qs-l">Events</div>
               </div>
               <div class="qs-item">
-                <div class="qs-n">1,660</div>
+                <div class="qs-n" id="sb-shifts">1,660</div>
                 <div class="qs-l">Shifts</div>
               </div>
               <div class="qs-item" style="background:#FFE4E4">
-                <div class="qs-n" style="color:var(--red)">99.9K</div>
+                <div class="qs-n" id="sb-letters" style="color:var(--red)">99.9K</div>
                 <div class="qs-l">Letters</div>
               </div>
             </div>
             <div class="prog-item">
               <div class="prog-row">
                 <span class="prog-label">Letters: 100K Goal</span>
-                <span class="prog-val">99,908</span>
+                <span class="prog-val" id="prog-letters-val">99,908</span>
               </div>
               <div class="prog-track">
                 <div class="prog-fill fill-red" style="width:99.9%"></div>
@@ -275,82 +154,37 @@
         </div>
 
         <div class="sidebar-card">
-          <div class="sidebar-head">📅 Next Up</div>
-          <div class="sidebar-body">
-            <div class="mini-event">
-              <div class="mini-date">
-                <div class="mini-month">Mar</div>
-                <div class="mini-day">22</div>
-              </div>
-              <div class="mini-info">
-                <div class="mini-title">CA-45 Phone Bank</div>
-                <div class="mini-sub">💻 Virtual · 6–8 PM</div>
-              </div>
-            </div>
-            <div class="mini-event">
-              <div class="mini-date">
-                <div class="mini-month">Mar</div>
-                <div class="mini-day">26</div>
-              </div>
-              <div class="mini-info">
-                <div class="mini-title">Letter-Writing Party</div>
-                <div class="mini-sub">📍 Mar Vista · 4–6:30 PM</div>
-              </div>
-            </div>
-            <div class="mini-event">
-              <div class="mini-date">
-                <div class="mini-month">Mar</div>
-                <div class="mini-day">29</div>
-              </div>
-              <div class="mini-info">
-                <div class="mini-title">New Volunteer Orientation</div>
-                <div class="mini-sub">💻 Virtual · 2–3:30 PM</div>
-              </div>
-            </div>
-            <div class="mini-event">
-              <div class="mini-date">
-                <div class="mini-month">Apr</div>
-                <div class="mini-day">5</div>
-              </div>
-              <div class="mini-info">
-                <div class="mini-title">Door Knock — Venice</div>
-                <div class="mini-sub">📍 Abbot Kinney · 10 AM</div>
-              </div>
-            </div>
+          <div class="sidebar-head">Next Up</div>
+          <div class="sidebar-body" id="sidebar-events">
+            <!-- populated by JS -->
           </div>
         </div>
 
         <div class="sidebar-card">
-          <div class="sidebar-head">🎯 Priority Races</div>
+          <div class="sidebar-head">Priority Races</div>
           <div class="sidebar-body">
             <div style="margin-bottom:.85rem">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.3rem">
                 <span style="font-weight:700;font-size:.85rem">CA-45 (Tran)</span>
-                <span style="font-size:.7rem;background:#FFE4E4;color:var(--red);padding:.15rem .5rem;border-radius:3px;font-weight:700">🔥 TOP</span>
+                <span style="font-size:.7rem;background:#FFE4E4;color:var(--red);padding:.15rem .5rem;border-radius:3px;font-weight:700">TOP</span>
               </div>
-              <div class="prog-track">
-                <div class="prog-fill fill-red" style="width:58%"></div>
-              </div>
+              <div class="prog-track"><div class="prog-fill fill-red" style="width:58%"></div></div>
               <div style="font-size:.7rem;color:var(--muted);margin-top:.2rem">Won by +1.8% in 2024</div>
             </div>
             <div style="margin-bottom:.85rem">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.3rem">
                 <span style="font-weight:700;font-size:.85rem">CA-27 (Whitesides)</span>
-                <span style="font-size:.7rem;background:#FFE4E4;color:var(--red);padding:.15rem .5rem;border-radius:3px;font-weight:700">🔥 TOP</span>
+                <span style="font-size:.7rem;background:#FFE4E4;color:var(--red);padding:.15rem .5rem;border-radius:3px;font-weight:700">TOP</span>
               </div>
-              <div class="prog-track">
-                <div class="prog-fill fill-sky" style="width:52%"></div>
-              </div>
+              <div class="prog-track"><div class="prog-fill fill-sky" style="width:52%"></div></div>
               <div style="font-size:.7rem;color:var(--muted);margin-top:.2rem">Won by +2.0% in 2024</div>
             </div>
             <div>
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.3rem">
                 <span style="font-weight:700;font-size:.85rem">CA-47 (Min)</span>
-                <span style="font-size:.7rem;background:#FEF3C7;color:#92600A;padding:.15rem .5rem;border-radius:3px;font-weight:700">👀 Watch</span>
+                <span style="font-size:.7rem;background:#FEF3C7;color:#92600A;padding:.15rem .5rem;border-radius:3px;font-weight:700">Watch</span>
               </div>
-              <div class="prog-track">
-                <div class="prog-fill fill-gold" style="width:55%"></div>
-              </div>
+              <div class="prog-track"><div class="prog-fill fill-gold" style="width:55%"></div></div>
               <div style="font-size:.7rem;color:var(--muted);margin-top:.2rem">Won by +2.8% in 2024</div>
             </div>
           </div>
@@ -383,7 +217,6 @@
             <div class="cal-dow">S</div>
           </div>
           <div class="cal-grid">
-            <!-- Week 1 -->
             <div class="cal-day other-month"><div class="cal-day-n">23</div></div>
             <div class="cal-day other-month"><div class="cal-day-n">24</div></div>
             <div class="cal-day other-month"><div class="cal-day-n">25</div></div>
@@ -391,7 +224,6 @@
             <div class="cal-day other-month"><div class="cal-day-n">27</div></div>
             <div class="cal-day other-month"><div class="cal-day-n">28</div></div>
             <div class="cal-day"><div class="cal-day-n">1</div></div>
-            <!-- Week 2 -->
             <div class="cal-day"><div class="cal-day-n">2</div></div>
             <div class="cal-day"><div class="cal-day-n">3</div></div>
             <div class="cal-day"><div class="cal-day-n">4</div></div>
@@ -399,7 +231,6 @@
             <div class="cal-day"><div class="cal-day-n">6</div></div>
             <div class="cal-day"><div class="cal-day-n">7</div></div>
             <div class="cal-day"><div class="cal-day-n">8</div></div>
-            <!-- Week 3 -->
             <div class="cal-day"><div class="cal-day-n">9</div></div>
             <div class="cal-day"><div class="cal-day-n">10</div></div>
             <div class="cal-day"><div class="cal-day-n">11</div></div>
@@ -407,47 +238,29 @@
             <div class="cal-day"><div class="cal-day-n">13</div></div>
             <div class="cal-day"><div class="cal-day-n">14</div></div>
             <div class="cal-day"><div class="cal-day-n">15</div></div>
-            <!-- Week 4 -->
             <div class="cal-day"><div class="cal-day-n">16</div></div>
             <div class="cal-day today"><div class="cal-day-n">17</div></div>
             <div class="cal-day"><div class="cal-day-n">18</div></div>
             <div class="cal-day"><div class="cal-day-n">19</div></div>
             <div class="cal-day"><div class="cal-day-n">20</div></div>
             <div class="cal-day"><div class="cal-day-n">21</div></div>
-            <div class="cal-day has-event">
-              <div class="cal-day-n">22</div>
-              <div class="cal-dot dot-red">Phone Bank</div>
-            </div>
-            <!-- Week 5 -->
+            <div class="cal-day has-event"><div class="cal-day-n">22</div><div class="cal-dot dot-red">Phone Bank</div></div>
             <div class="cal-day"><div class="cal-day-n">23</div></div>
             <div class="cal-day"><div class="cal-day-n">24</div></div>
             <div class="cal-day"><div class="cal-day-n">25</div></div>
-            <div class="cal-day has-event">
-              <div class="cal-day-n">26</div>
-              <div class="cal-dot dot-gold">Letters</div>
-            </div>
+            <div class="cal-day has-event"><div class="cal-day-n">26</div><div class="cal-dot dot-gold">Letters</div></div>
             <div class="cal-day"><div class="cal-day-n">27</div></div>
             <div class="cal-day"><div class="cal-day-n">28</div></div>
-            <div class="cal-day has-event">
-              <div class="cal-day-n">29</div>
-              <div class="cal-dot dot-blue">Orientation</div>
-            </div>
-            <!-- Week 6 -->
+            <div class="cal-day has-event"><div class="cal-day-n">29</div><div class="cal-dot dot-blue">Orientation</div></div>
             <div class="cal-day"><div class="cal-day-n">30</div></div>
             <div class="cal-day"><div class="cal-day-n">31</div></div>
-            <div class="cal-day other-month has-event">
-              <div class="cal-day-n">1</div>
-            </div>
+            <div class="cal-day other-month"><div class="cal-day-n">1</div></div>
             <div class="cal-day other-month"><div class="cal-day-n">2</div></div>
             <div class="cal-day other-month"><div class="cal-day-n">3</div></div>
             <div class="cal-day other-month"><div class="cal-day-n">4</div></div>
-            <div class="cal-day other-month has-event">
-              <div class="cal-day-n">5</div>
-            </div>
+            <div class="cal-day other-month has-event"><div class="cal-day-n">5</div></div>
           </div>
         </div>
-
-        <!-- Legend -->
         <div style="margin-top:1rem;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1rem 1.1rem;box-shadow:var(--shadow)">
           <div style="font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem">Event Types</div>
           <div style="display:flex;flex-direction:column;gap:.3rem">
@@ -465,108 +278,8 @@
           <h2>Upcoming Events</h2>
           <a href="https://swingleft.org/group/swingleftmarvista" target="_blank">All Events →</a>
         </div>
-        <div class="event-list">
-
-          <div class="event-card">
-            <div class="event-date-col">
-              <div class="edc-month">Mar</div>
-              <div class="edc-day">22</div>
-              <div class="edc-dow">Sat</div>
-            </div>
-            <div class="event-main">
-              <div class="event-type type-phone">📞 Phone Bank</div>
-              <div class="event-name">CA-45 Weekly Phone Bank</div>
-              <div class="event-details">
-                <span class="event-detail">🕕 6:00 – 8:00 PM</span>
-                <span class="event-detail">💻 Virtual (Zoom)</span>
-                <span class="event-detail">🌟 All levels welcome</span>
-              </div>
-            </div>
-            <div class="event-actions">
-              <a href="https://swingleft.org" target="_blank" class="btn-rsvp">RSVP</a>
-            </div>
-          </div>
-
-          <div class="event-card">
-            <div class="event-date-col">
-              <div class="edc-month">Mar</div>
-              <div class="edc-day">26</div>
-              <div class="edc-dow">Wed</div>
-            </div>
-            <div class="event-main">
-              <div class="event-type type-letter">✉️ Letter Writing</div>
-              <div class="event-name">Vote Forward Letter-Writing Party</div>
-              <div class="event-details">
-                <span class="event-detail">🕔 4:00 – 6:30 PM</span>
-                <span class="event-detail">📍 Mar Vista Community Center</span>
-                <span class="event-detail">☕ Coffee provided</span>
-              </div>
-            </div>
-            <div class="event-actions">
-              <a href="https://swingleft.org" target="_blank" class="btn-rsvp">RSVP</a>
-            </div>
-          </div>
-
-          <div class="event-card">
-            <div class="event-date-col">
-              <div class="edc-month">Mar</div>
-              <div class="edc-day">29</div>
-              <div class="edc-dow">Sat</div>
-            </div>
-            <div class="event-main">
-              <div class="event-type type-training">🎓 Training</div>
-              <div class="event-name">New Volunteer Orientation</div>
-              <div class="event-details">
-                <span class="event-detail">🕑 2:00 – 3:30 PM</span>
-                <span class="event-detail">💻 Virtual (Zoom)</span>
-                <span class="event-detail">🙋 First-timer friendly</span>
-              </div>
-            </div>
-            <div class="event-actions">
-              <a href="https://swingleft.org" target="_blank" class="btn-rsvp">RSVP</a>
-            </div>
-          </div>
-
-          <div class="event-card">
-            <div class="event-date-col">
-              <div class="edc-month">Apr</div>
-              <div class="edc-day">5</div>
-              <div class="edc-dow">Sun</div>
-            </div>
-            <div class="event-main">
-              <div class="event-type type-canvass">🚶 Canvass</div>
-              <div class="event-name">Door Knock — Venice / Mar Vista</div>
-              <div class="event-details">
-                <span class="event-detail">🕙 10:00 AM – 1:00 PM</span>
-                <span class="event-detail">📍 Abbot Kinney meet-up</span>
-                <span class="event-detail">👟 Wear walking shoes</span>
-              </div>
-            </div>
-            <div class="event-actions">
-              <a href="https://swingleft.org" target="_blank" class="btn-rsvp">RSVP</a>
-            </div>
-          </div>
-
-          <div class="event-card">
-            <div class="event-date-col">
-              <div class="edc-month">Apr</div>
-              <div class="edc-day">12</div>
-              <div class="edc-dow">Sun</div>
-            </div>
-            <div class="event-main">
-              <div class="event-type type-social">🤝 Social</div>
-              <div class="event-name">Volunteer Happy Hour & Chapter Meeting</div>
-              <div class="event-details">
-                <span class="event-detail">🕔 5:30 – 7:30 PM</span>
-                <span class="event-detail">📍 West LA (TBD)</span>
-                <span class="event-detail">🍻 Meet your crew</span>
-              </div>
-            </div>
-            <div class="event-actions">
-              <a href="https://swingleft.org" target="_blank" class="btn-rsvp">RSVP</a>
-            </div>
-          </div>
-
+        <div class="event-list" id="event-list">
+          <!-- populated by JS -->
         </div>
       </div>
     </div>
@@ -581,128 +294,8 @@
         <p>These volunteers run our chapter — coordinating events, supporting new volunteers, and keeping West LA's organizing engine running. Reach out to get connected.</p>
       </div>
     </div>
-    <div class="org-grid">
-
-      <div class="org-card">
-        <div class="org-card-header">
-          <div class="org-avatar">👩</div>
-          <div class="org-name">Maria González</div>
-          <div class="org-role">Chapter Lead · West LA</div>
-        </div>
-        <div class="org-body">
-          <div class="org-bio">Maria has been organizing with Swing Left since 2018. She ran our 2024 GOTV operation and helped coordinate the CA-45 volunteer bus. Her day job is in public health — she brings the same urgency to politics.</div>
-          <div class="org-stats">
-            <span class="org-badge">📞 800+ calls</span>
-            <span class="org-badge">🎯 CA-45 Lead</span>
-            <span class="org-badge">6 yrs active</span>
-          </div>
-        </div>
-        <div class="org-contact">
-          <a href="/cdn-cgi/l/email-protection#e2958791968e83a291958b8c858e878496cc8d9085" class="org-btn org-btn-primary">Email</a>
-          <a href="https://swingleft.org" target="_blank" class="org-btn org-btn-secondary">Profile</a>
-        </div>
-      </div>
-
-      <div class="org-card">
-        <div class="org-card-header">
-          <div class="org-avatar">👨</div>
-          <div class="org-name">James Lee</div>
-          <div class="org-role">Canvassing Coordinator</div>
-        </div>
-        <div class="org-body">
-          <div class="org-bio">James organizes all in-person door-knocking across Venice, Mar Vista, and Culver City. He's knocked over 450 doors personally and trains new canvassers every month. Former community organizer with the LA Tenants Union.</div>
-          <div class="org-stats">
-            <span class="org-badge">🚶 450+ doors</span>
-            <span class="org-badge">📋 Trainer</span>
-            <span class="org-badge">Mar Vista</span>
-          </div>
-        </div>
-        <div class="org-contact">
-          <a href="/cdn-cgi/l/email-protection#4b3c2e383f272a0b383c22252c272e2d3f6524392c" class="org-btn org-btn-primary">Email</a>
-          <a href="https://swingleft.org" target="_blank" class="org-btn org-btn-secondary">Profile</a>
-        </div>
-      </div>
-
-      <div class="org-card">
-        <div class="org-card-header">
-          <div class="org-avatar">👩</div>
-          <div class="org-name">Priya Nair</div>
-          <div class="org-role">Letter-Writing Lead</div>
-        </div>
-        <div class="org-body">
-          <div class="org-bio">Priya coordinates our Vote Forward program and has helped our chapter write nearly 100,000 letters. She hosts letter-writing parties monthly and manages our chapter's relationship with the national Vote Forward team.</div>
-          <div class="org-stats">
-            <span class="org-badge">✉️ 300+ letters</span>
-            <span class="org-badge">Vote Forward</span>
-            <span class="org-badge">Culver City</span>
-          </div>
-        </div>
-        <div class="org-contact">
-          <a href="/cdn-cgi/l/email-protection#2d5a485e59414c6d5e5a44434a41484b5903425f4a" class="org-btn org-btn-primary">Email</a>
-          <a href="https://swingleft.org" target="_blank" class="org-btn org-btn-secondary">Profile</a>
-        </div>
-      </div>
-
-      <div class="org-card">
-        <div class="org-card-header">
-          <div class="org-avatar">👨</div>
-          <div class="org-name">David Kim</div>
-          <div class="org-role">Phone Banking Lead</div>
-        </div>
-        <div class="org-body">
-          <div class="org-bio">David runs our weekly phone bank sessions for CA-45 and CA-27. He trains new phone bankers, manages the Zoom calls, and handles shift scheduling. He's logged over 600 calls himself across 3 election cycles.</div>
-          <div class="org-stats">
-            <span class="org-badge">📞 600+ calls</span>
-            <span class="org-badge">Zoom Host</span>
-            <span class="org-badge">Venice</span>
-          </div>
-        </div>
-        <div class="org-contact">
-          <a href="/cdn-cgi/l/email-protection#bdcad8cec9d1dcfdcecad4d3dad1d8dbc993d2cfda" class="org-btn org-btn-primary">Email</a>
-          <a href="https://swingleft.org" target="_blank" class="org-btn org-btn-secondary">Profile</a>
-        </div>
-      </div>
-
-      <div class="org-card">
-        <div class="org-card-header">
-          <div class="org-avatar">👩</div>
-          <div class="org-name">Aisha Washington</div>
-          <div class="org-role">New Volunteer Coordinator</div>
-        </div>
-        <div class="org-body">
-          <div class="org-bio">Aisha runs our new volunteer onboarding program and orientations. If you're new to Swing Left, she's your first contact. She also manages our Instagram and helps with event promotion across West LA neighborhoods.</div>
-          <div class="org-stats">
-            <span class="org-badge">🌱 Onboarding</span>
-            <span class="org-badge">📸 Social Media</span>
-            <span class="org-badge">Palms</span>
-          </div>
-        </div>
-        <div class="org-contact">
-          <a href="/cdn-cgi/l/email-protection#dea9bbadaab2bf9eada9b7b0b9b2bbb8aaf0b1acb9" class="org-btn org-btn-primary">Email</a>
-          <a href="https://swingleft.org" target="_blank" class="org-btn org-btn-secondary">Profile</a>
-        </div>
-      </div>
-
-      <div class="org-card">
-        <div class="org-card-header">
-          <div class="org-avatar">👨</div>
-          <div class="org-name">Tom Rivera</div>
-          <div class="org-role">Fundraising & Donor Outreach</div>
-        </div>
-        <div class="org-body">
-          <div class="org-bio">Tom coordinates our local fundraising events and manages donor relationships for the West LA chapter. He helped organize the fundraiser that raised $12K for CA priority candidates and runs quarterly donor dinners.</div>
-          <div class="org-stats">
-            <span class="org-badge">💰 Fundraising</span>
-            <span class="org-badge">Events Lead</span>
-            <span class="org-badge">Santa Monica</span>
-          </div>
-        </div>
-        <div class="org-contact">
-          <a href="/cdn-cgi/l/email-protection#5a2d3f292e363b1a292d33343d363f3c2e7435283d" class="org-btn org-btn-primary">Email</a>
-          <a href="https://swingleft.org" target="_blank" class="org-btn org-btn-secondary">Profile</a>
-        </div>
-      </div>
-
+    <div class="org-grid" id="org-grid">
+      <!-- populated by JS -->
     </div>
   </div>
 
@@ -712,11 +305,9 @@
       <span style="font-size:1.75rem">🧰</span>
       <p>Everything you need to take action — scripts, training videos, voter tools, and guides. Bookmarked links go directly to the most useful pages on Swing Left, Vote Forward, and partner sites.</p>
     </div>
-
     <div class="res-sections">
       <div>
-        <div class="res-section-title">🔗 Essential Links</div>
-
+        <div class="res-section-title">Essential Links</div>
         <a href="https://swingleft.org/group/swingleftmarvista" target="_blank" class="res-link-card">
           <div class="res-icon icon-red">🏠</div>
           <div class="res-link-info">
@@ -725,7 +316,6 @@
           </div>
           <span class="res-link-arrow">→</span>
         </a>
-
         <a href="https://votefwd.org" target="_blank" class="res-link-card">
           <div class="res-icon icon-blue">✉️</div>
           <div class="res-link-info">
@@ -734,7 +324,6 @@
           </div>
           <span class="res-link-arrow">→</span>
         </a>
-
         <a href="https://swingleft.org/p/events" target="_blank" class="res-link-card">
           <div class="res-icon icon-gold">📅</div>
           <div class="res-link-info">
@@ -743,7 +332,6 @@
           </div>
           <span class="res-link-arrow">→</span>
         </a>
-
         <a href="https://swingleft.org/p/donate" target="_blank" class="res-link-card">
           <div class="res-icon icon-green">💰</div>
           <div class="res-link-info">
@@ -752,7 +340,6 @@
           </div>
           <span class="res-link-arrow">→</span>
         </a>
-
         <a href="https://www.instagram.com/swingleft" target="_blank" class="res-link-card">
           <div class="res-icon icon-purple">📸</div>
           <div class="res-link-info">
@@ -762,58 +349,36 @@
           <span class="res-link-arrow">→</span>
         </a>
       </div>
-
       <div>
-        <div class="res-section-title">📖 Volunteer Guides</div>
-
+        <div class="res-section-title">Volunteer Guides</div>
         <div class="guide-card">
           <div class="guide-title">Phone Banking 101</div>
           <div class="guide-body">Complete guide to making your first call — how to use the dialer, what to say, how to handle tough conversations, and how to log your results. Includes the updated 2026 script.</div>
-          <div class="guide-tags">
-            <span class="guide-tag">Phone Bank</span>
-            <span class="guide-tag">Beginner</span>
-            <span class="guide-tag">15 min read</span>
-          </div>
+          <div class="guide-tags"><span class="guide-tag">Phone Bank</span><span class="guide-tag">Beginner</span><span class="guide-tag">15 min read</span></div>
         </div>
-
         <div class="guide-card">
           <div class="guide-title">Canvassing Toolkit</div>
           <div class="guide-body">Everything for a door-knocking shift: what to bring, how to use MiniVAN, conversation best practices, and how to handle common questions at the door. Includes neighborhood maps for Mar Vista and Venice.</div>
-          <div class="guide-tags">
-            <span class="guide-tag">Canvass</span>
-            <span class="guide-tag">In-Person</span>
-            <span class="guide-tag">Map included</span>
-          </div>
+          <div class="guide-tags"><span class="guide-tag">Canvass</span><span class="guide-tag">In-Person</span><span class="guide-tag">Map included</span></div>
         </div>
-
         <div class="guide-card">
           <div class="guide-title">Vote Forward Letter-Writing Guide</div>
           <div class="guide-body">How to sign up, print your letters, write them correctly, and send them at the right time. Our chapter has written 99,908 — you can be number 100,000.</div>
-          <div class="guide-tags">
-            <span class="guide-tag">Letters</span>
-            <span class="guide-tag">Work from home</span>
-            <span class="guide-tag">Any time</span>
-          </div>
+          <div class="guide-tags"><span class="guide-tag">Letters</span><span class="guide-tag">Work from home</span><span class="guide-tag">Any time</span></div>
         </div>
-
         <div class="guide-card">
           <div class="guide-title">Hosting Your Own Event</div>
-          <div class="guide-body">How to run a letter-writing party, phone bank, or fundraiser from your home or a local spot. Includes Zoom setup, sign-up links, how to promote it, and what to expect. Reach out to Tom Rivera for support.</div>
-          <div class="guide-tags">
-            <span class="guide-tag">Host</span>
-            <span class="guide-tag">Community</span>
-            <span class="guide-tag">Advanced</span>
-          </div>
+          <div class="guide-body">How to run a letter-writing party, phone bank, or fundraiser from your home or a local spot. Includes Zoom setup, sign-up links, how to promote it, and what to expect.</div>
+          <div class="guide-tags"><span class="guide-tag">Host</span><span class="guide-tag">Community</span><span class="guide-tag">Advanced</span></div>
         </div>
-
       </div>
     </div>
   </div>
 
 </div><!-- /main -->
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-statistics.js"></script>
 <script>
+// ─── Tab switching ───────────────────────────────────────────
 function switchTab(id, btn) {
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -821,9 +386,9 @@ function switchTab(id, btn) {
   btn.classList.add('active');
 }
 
-// Announcements carousel
+// ─── Announcements carousel ──────────────────────────────────
 let annIndex = 0;
-const annTotal = 4;
+let annTotal = 0;
 
 function annRender() {
   document.getElementById('ann-track').style.transform = 'translateX(-' + (annIndex * 100) + '%)';
@@ -831,6 +396,7 @@ function annRender() {
   document.querySelectorAll('.ann-pip').forEach(function(p, i) { p.classList.toggle('active', i === annIndex); });
 }
 function annMove(dir) {
+  if (annTotal === 0) return;
   annIndex = (annIndex + dir + annTotal) % annTotal;
   annRender();
   resetAnnAuto();
@@ -845,6 +411,178 @@ function resetAnnAuto() {
   clearInterval(annTimer);
   annTimer = setInterval(function() { annMove(1); }, 5000);
 }
+
+// ─── AgentCMS data fetch ─────────────────────────────────────
+const API = 'https://www.agentcms.app/api/p/swingleftla';
+const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const MONTHS_LONG = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const DOWS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+function parseDate(str) {
+  return new Date(str + 'T00:00:00');
+}
+function initials(name) {
+  return (name || '?').split(' ').map(w => w[0]).join('').substring(0, 2).toUpperCase();
+}
+
+async function init() {
+  const [site, announcements, news, events, organizers] = await Promise.all([
+    fetch(API + '/site').then(r => r.json()).catch(() => ({})),
+    fetch(API + '/announcements').then(r => r.json()).catch(() => []),
+    fetch(API + '/news').then(r => r.json()).catch(() => []),
+    fetch(API + '/events').then(r => r.json()).catch(() => []),
+    fetch(API + '/organizers').then(r => r.json()).catch(() => []),
+  ]);
+
+  // ── Site stats ──────────────────────────────────────────────
+  document.getElementById('stat-members').textContent = site.members  ?? '736';
+  document.getElementById('stat-events').textContent  = site.events   ?? '82';
+  document.getElementById('stat-shifts').textContent  = site.shifts   ?? '1,660';
+  document.getElementById('stat-letters').textContent = site.letters  ?? '99.9K';
+  document.getElementById('sb-members').textContent   = site.members  ?? '736';
+  document.getElementById('sb-events').textContent    = site.events   ?? '82';
+  document.getElementById('sb-shifts').textContent    = site.shifts   ?? '1,660';
+  document.getElementById('sb-letters').textContent   = site.letters  ?? '99.9K';
+  if (site.hero_sub) document.getElementById('hero-sub').textContent = site.hero_sub;
+
+  // ── Announcements ───────────────────────────────────────────
+  const dotMap = { red: 'ann-dot-red', gold: 'ann-dot-gold', sky: 'ann-dot-sky', green: 'ann-dot-green' };
+  const annData = announcements.length > 0 ? announcements : [];
+  annTotal = annData.length;
+  document.getElementById('ann-counter').textContent = annTotal > 0 ? '1 / ' + annTotal : '';
+  document.getElementById('ann-track').innerHTML = annData.map(a => `
+    <div class="ann-slide">
+      <span class="ann-dot ${dotMap[a.color] || 'ann-dot-red'}"></span>
+      <div class="ann-content">
+        <a href="${a.link || '#'}" target="_blank" class="ann-title-link">${a.title}</a>
+        ${a.sub ? '<div class="ann-sub">' + a.sub + '</div>' : ''}
+      </div>
+      <a href="${a.link || '#'}" target="_blank" class="ann-link">${a.link_text || '→'}</a>
+    </div>
+  `).join('');
+  document.getElementById('ann-pips').innerHTML = annData.map((_, i) =>
+    '<button class="ann-pip' + (i === 0 ? ' active' : '') + '" onclick="annGoto(' + i + ')"></button>'
+  ).join('');
+
+  // ── News feed ───────────────────────────────────────────────
+  const catClass = { 'Breaking': 'cat-breaking', 'Milestone': 'cat-win', 'Action Alert': 'cat-alert', 'Chapter News': 'cat-news', 'Training': 'cat-training' };
+  const cardClass = { 'Breaking': 'post-card-featured', 'Milestone': 'post-card-win', 'Action Alert': 'post-card-action' };
+  const newsFeed = document.getElementById('news-feed');
+  if (news.length === 0) {
+    newsFeed.innerHTML = '<p style="color:var(--muted);text-align:center;padding:2rem">No updates yet.</p>';
+  } else {
+    newsFeed.innerHTML = news.map(n => {
+      const d = parseDate(n.date);
+      const dateStr = MONTHS_LONG[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+      const cc = catClass[n.category] || 'cat-news';
+      const pc = cardClass[n.category] || '';
+      const ini = initials(n.author);
+      return `
+        <div class="post-card ${pc}">
+          <div class="post-inner">
+            <div class="post-meta">
+              <span class="post-cat ${cc}">${n.category || 'News'}</span>
+              <span class="post-date">${dateStr}</span>
+            </div>
+            <div class="post-title">${n.title}</div>
+            <div class="post-body">${n.body || ''}</div>
+          </div>
+          <div class="post-footer">
+            <div class="post-author">
+              <div class="post-avatar">${ini}</div>
+              <span>${n.author || ''}</span>
+            </div>
+            <a href="#" class="read-more">Read more →</a>
+          </div>
+        </div>`;
+    }).join('');
+  }
+
+  // ── Sidebar mini events ─────────────────────────────────────
+  const sidebarEl = document.getElementById('sidebar-events');
+  const upcoming = events.slice(0, 4);
+  if (upcoming.length === 0) {
+    sidebarEl.innerHTML = '<p style="color:var(--muted);font-size:.82rem;text-align:center;padding:.5rem">No upcoming events.</p>';
+  } else {
+    sidebarEl.innerHTML = upcoming.map(e => {
+      const d = parseDate(e.date);
+      return `
+        <div class="mini-event">
+          <div class="mini-date">
+            <div class="mini-month">${MONTHS[d.getMonth()]}</div>
+            <div class="mini-day">${d.getDate()}</div>
+          </div>
+          <div class="mini-info">
+            <div class="mini-title">${e.title}</div>
+            <div class="mini-sub">${e.location || ''} · ${e.time || ''}</div>
+          </div>
+        </div>`;
+    }).join('');
+  }
+
+  // ── Event list (calendar tab) ───────────────────────────────
+  const typeClass = { 'Phone Bank': 'type-phone', 'Letter Writing': 'type-letter', 'Training': 'type-training', 'Canvass': 'type-canvass', 'Social': 'type-social' };
+  const eventList = document.getElementById('event-list');
+  if (events.length === 0) {
+    eventList.innerHTML = '<p style="color:var(--muted);text-align:center;padding:2rem">No upcoming events.</p>';
+  } else {
+    eventList.innerHTML = events.map(e => {
+      const d = parseDate(e.date);
+      const tc = typeClass[e.type] || 'type-phone';
+      return `
+        <div class="event-card">
+          <div class="event-date-col">
+            <div class="edc-month">${MONTHS[d.getMonth()]}</div>
+            <div class="edc-day">${d.getDate()}</div>
+            <div class="edc-dow">${DOWS[d.getDay()]}</div>
+          </div>
+          <div class="event-main">
+            <div class="event-type ${tc}">${e.type}</div>
+            <div class="event-name">${e.title}</div>
+            <div class="event-details">
+              ${e.time     ? '<span class="event-detail">' + e.time     + '</span>' : ''}
+              ${e.location ? '<span class="event-detail">' + e.location + '</span>' : ''}
+              ${e.note     ? '<span class="event-detail">' + e.note     + '</span>' : ''}
+            </div>
+          </div>
+          <div class="event-actions">
+            <a href="${e.rsvp_url || 'https://swingleft.org'}" target="_blank" class="btn-rsvp">RSVP</a>
+          </div>
+        </div>`;
+    }).join('');
+  }
+
+  // ── Organizers ──────────────────────────────────────────────
+  const orgGrid = document.getElementById('org-grid');
+  if (organizers.length === 0) {
+    orgGrid.innerHTML = '<p style="color:var(--muted);text-align:center;padding:2rem">No organizers listed.</p>';
+  } else {
+    orgGrid.innerHTML = organizers.map(o => {
+      const ini = initials(o.name);
+      const badges = (o.badges || '').split(',').map(b => b.trim()).filter(Boolean);
+      return `
+        <div class="org-card">
+          <div class="org-card-header">
+            <div class="org-avatar">${ini}</div>
+            <div class="org-name">${o.name}</div>
+            <div class="org-role">${o.role || ''}</div>
+          </div>
+          <div class="org-body">
+            <div class="org-bio">${o.bio || ''}</div>
+            <div class="org-stats">
+              ${badges.map(b => '<span class="org-badge">' + b + '</span>').join('')}
+            </div>
+          </div>
+          <div class="org-contact">
+            <a href="mailto:${o.email || ''}" class="org-btn org-btn-primary">Email</a>
+            <a href="https://swingleft.org" target="_blank" class="org-btn org-btn-secondary">Profile</a>
+          </div>
+        </div>`;
+    }).join('');
+  }
+}
+
+init();
 </script>
 </body>
 </html>
